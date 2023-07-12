@@ -5,7 +5,6 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import pyautogui as pag
-from dotenv import load_dotenv
 
 def clickMore():
     allbtn=driver.find_elements(By.TAG_NAME,"button")
@@ -34,8 +33,8 @@ try:
     driver.get('https://www.linkedin.com')
     driver.maximize_window()
     time.sleep(10)
-    USERNAME="joeytrib2148@gmail.com"
-    PASSWORD='tanmayee2148'
+    USERNAME="<Enter your email id here>"
+    PASSWORD='<Enter your password here>'
     username = driver.find_element(By.XPATH,"//input[@name='session_key']")
     password = driver.find_element(By.XPATH,"//input[@name='session_password']")
     username.send_keys(USERNAME)
@@ -50,7 +49,7 @@ try:
         continue
     
     print('Logged in')
-    driver.get('https://www.linkedin.com/in/tanmayee-mali/')
+    driver.get('link of the competitors profile')
     time.sleep(3)
     #clickMore()
     #clickConnect()
